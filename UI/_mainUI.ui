@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1286</width>
+    <height>1066</height>
+   </rect>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>1010</width>
+    <height>582</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>学生宿舍管理</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../收藏夹/iCloud Photos/Downloads/2019/IMG_0574.PNG</normaloff>../../收藏夹/iCloud Photos/Downloads/2019/IMG_0574.PNG</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#StudentBox{background-color: rgb(255, 255, 255)}</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>40</width>
+    <height>40</height>
+   </size>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="widget">
+   <widget class="QTabWidget" name="Table">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1271</width>
+      <height>1041</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Stu_table">
+     <property name="statusTip">
+      <string>学生管理</string>
+     </property>
+     <attribute name="title">
+      <string>学生管理</string>
+     </attribute>
+     <widget class="QPushButton" name="actionEdit_1">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>760</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="statusTip">
+       <string>添加学生信息</string>
+      </property>
+      <property name="text">
+       <string>添加学生...</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="SearchFrame_1">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>21</y>
+        <width>671</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="SearchEdit_1">
+       <property name="geometry">
+        <rect>
+         <x>3</x>
+         <y>0</y>
+         <width>471</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>快速检索信息，多个信息用“|&quot;隔开</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="SearchBox_1">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>0</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>学号</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>姓名</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>楼号</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>宿舍号</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>工作人员ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>是否阳性</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="SearchButton_1">
+       <property name="geometry">
+        <rect>
+         <x>564</x>
+         <y>0</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>对多个属性进行检索</string>
+       </property>
+       <property name="text">
+        <string>高级搜索...</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_1">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>70</y>
+        <width>291</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#groupBox_1{
+background : rgb(237, 255, 254);
+}</string>
+      </property>
+      <property name="title">
+       <string>学生信息</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QLabel" name="SIDlable">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>60</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>学号</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Snamelabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>60</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>姓名</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Ssexlabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>60</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>性别</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Dorlabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>204</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>楼号</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DIDlabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>240</y>
+         <width>60</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>宿舍号</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MIDlabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>工作人员ID</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SID">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>40</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>学号</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Sname">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>70</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>姓名</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Ssex">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>100</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>性别</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Dor">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>210</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>楼号</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DID">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>240</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>宿舍号</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MID">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>270</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>工作人员ID</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="editButton_1">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>380</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>修改当前学生信息</string>
+       </property>
+       <property name="text">
+        <string>修改...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="DeleteButton_1">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>380</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>一旦删除无法恢复</string>
+       </property>
+       <property name="text">
+        <string>删除</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="hethdaylabel">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>120</y>
+         <width>72</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>绿码天数</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="hethday">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>120</y>
+         <width>72</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>绿码天数</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ishethlabel">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>154</y>
+         <width>72</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>核酸情况</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="isheth">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>155</y>
+         <width>72</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>核酸情况</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="TableFrame_1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>941</width>
+        <height>911</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTreeWidget" name="studentTable">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>931</width>
+         <height>911</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>双击修改</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#studentTable
+{
+	background : rgb(237, 255, 254);
+	border:2px solid rgb(172, 172, 172)
+}</string>
+       </property>
+       <column>
+        <property name="text">
+         <string>学号</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>姓名</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>性别</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>绿码天数</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>核酸情况</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>楼号</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>宿舍号</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>工作人员ID</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Dor_Table">
+     <property name="statusTip">
+      <string>宿舍管理</string>
+     </property>
+     <attribute name="title">
+      <string>宿舍管理</string>
+     </attribute>
+     <widget class="QFrame" name="SearchFrame_2">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>21</y>
+        <width>671</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="SearchEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>3</x>
+         <y>0</y>
+         <width>471</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>快速检索信息，多个信息用“|”隔开</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="SearchBox_2">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>0</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>楼号</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>宿舍号</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>可容纳数</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>入住人数</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>剩余空位</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="SearchButton_2">
+       <property name="geometry">
+        <rect>
+         <x>564</x>
+         <y>0</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>对多个属性进行检索</string>
+       </property>
+       <property name="text">
+        <string>高级搜索...</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="actionEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>760</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="statusTip">
+       <string>添加宿舍信息</string>
+      </property>
+      <property name="text">
+       <string>添加宿舍...</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="TableFrame_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>931</width>
+        <height>911</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTreeWidget" name="ShusheTable">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>931</width>
+         <height>911</height>
+        </rect>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="statusTip">
+        <string>双击修改信息</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#ShusheTable
+{
+	background : rgb(237, 255, 254);
+	border:2px solid rgb(172, 172, 172)
+}</string>
+       </property>
+       <column>
+        <property name="text">
+         <string>楼号</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>宿舍号</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>入住人数</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>剩余空位</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>可容纳人数</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>70</y>
+        <width>301</width>
+        <height>621</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#groupBox_2{
+background : rgb(237, 255, 254);
+}</string>
+      </property>
+      <property name="title">
+       <string>宿舍信息</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QLabel" name="Dor_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>80</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>楼号</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Snolabel_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>80</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>宿舍号</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="K_nlabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>可容纳人数</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="L_nlabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>入住人数</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="C_nlabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>160</y>
+         <width>80</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>剩余空位</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Lno_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>40</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>楼号</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Sno_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>70</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>宿舍号</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="K_n">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>100</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>可容纳人数</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="L_n">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>130</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>入住人数</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="C_n">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>160</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>剩余空位</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="editButton_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>260</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>修改当前宿舍信息</string>
+       </property>
+       <property name="text">
+        <string>修改...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="DeleteButton_2">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>260</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>一旦删除无法恢复</string>
+       </property>
+       <property name="text">
+        <string>删除</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="M_Table">
+     <attribute name="title">
+      <string>工作人员管理</string>
+     </attribute>
+     <widget class="QPushButton" name="actionEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>490</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="statusTip">
+       <string>添加宿管信息</string>
+      </property>
+      <property name="text">
+       <string>添加工作人员...</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>70</y>
+        <width>251</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#groupBox_3{
+background : rgb(237, 255, 254);
+}</string>
+      </property>
+      <property name="title">
+       <string>宿管信息</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QLabel" name="Mnolabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>80</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>工号</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Mnamelabel_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>80</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>姓名</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Msexlabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>性别</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Magelabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>80</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>年龄</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Mphonelabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>160</y>
+         <width>80</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>联系方式</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Mno">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>40</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>工号</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Mname_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>70</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>姓名</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MSex">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>100</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>性别</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Mage">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>130</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>年龄</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MPhone">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>160</y>
+         <width>100</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>联系方式</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="editButton_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>260</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>修改当前宿管信息</string>
+       </property>
+       <property name="text">
+        <string>修改...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="DeleteButton_3">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>260</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>一旦删除无法恢复</string>
+       </property>
+       <property name="text">
+        <string>删除</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="TableFrame_3">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>69</y>
+        <width>961</width>
+        <height>911</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTreeWidget" name="Mtable">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>941</width>
+         <height>911</height>
+        </rect>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="statusTip">
+        <string>双击修改信息</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#Mtable
+{
+	background : rgb(237, 255, 254);
+	border:2px solid rgb(172, 172, 172);
+}</string>
+       </property>
+       <column>
+        <property name="text">
+         <string>工号</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>姓名</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>性别</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>年龄</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>联系方式</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="SearchFrame_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>671</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="SearchEdit_3">
+       <property name="geometry">
+        <rect>
+         <x>3</x>
+         <y>0</y>
+         <width>471</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>快速检索信息，多个信息用“|&quot;隔开</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="SearchBox_3">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>0</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>工号</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>姓名</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>年龄</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>联系方式</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="SearchButton_3">
+       <property name="geometry">
+        <rect>
+         <x>564</x>
+         <y>0</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="statusTip">
+        <string>对多个属性进行检索</string>
+       </property>
+       <property name="text">
+        <string>高级搜索...</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="Student">
+   <property name="text">
+    <string>增加学生</string>
+   </property>
+   <property name="statusTip">
+    <string>增加学生</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>Table</tabstop>
+  <tabstop>SearchEdit_1</tabstop>
+  <tabstop>SearchBox_1</tabstop>
+  <tabstop>SearchButton_1</tabstop>
+  <tabstop>actionEdit_1</tabstop>
+  <tabstop>editButton_1</tabstop>
+  <tabstop>DeleteButton_1</tabstop>
+  <tabstop>SearchEdit_2</tabstop>
+  <tabstop>SearchBox_2</tabstop>
+  <tabstop>SearchButton_2</tabstop>
+  <tabstop>actionEdit_2</tabstop>
+  <tabstop>ShusheTable</tabstop>
+  <tabstop>editButton_2</tabstop>
+  <tabstop>DeleteButton_2</tabstop>
+  <tabstop>actionEdit_3</tabstop>
+  <tabstop>editButton_3</tabstop>
+  <tabstop>DeleteButton_3</tabstop>
+  <tabstop>Mtable</tabstop>
+  <tabstop>SearchEdit_3</tabstop>
+  <tabstop>SearchBox_3</tabstop>
+  <tabstop>SearchButton_3</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
